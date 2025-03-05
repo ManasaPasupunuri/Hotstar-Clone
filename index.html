@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotstar Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .container1 {
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+        }
+
+        .nav-right {
+            width: 7vw;
+            height: 100vh;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 40px;
+            padding-left: 10px;
+            padding-bottom: none;
+
+        }
+
+        .nav1 {
+
+            width: 70px;
+            padding-left: 20px;
+
+        }
+
+        .navicons {
+            color: rgb(151, 146, 146);
+            padding-left: 10ox;
+            gap: 37px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 80px;
+        }
+
+        .i1:hover {
+            color: white;
+        }
+
+        .i2:hover {
+            color: white;
+        }
+
+        .i3:hover {
+            color: white;
+        }
+
+        .i4:hover {
+            color: white;
+        }
+
+        .i5:hover {
+            color: white;
+        }
+
+        .i6:hover {
+            color: white;
+        }
+
+        .main-section {
+            width: 93vw;
+            min-height: 100vh;
+            background-color: black;
+            float: right;
+
+        }
+
+        .section-1 {
+            width: 85vw;
+            height: 200px;
+            /* background-color: orange; */
+            margin: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: flex;
+
+            .sub1 {
+                width: 50vw;
+                height: 100%;
+                background-image: url(sub1.png);
+                background-size: cover;
+                border-radius: 7px;
+            }
+
+            .sub2 {
+                width: 50vw;
+                height: 100%;
+                background-color: black;
+                border-radius: 2px;
+
+
+            }
+
+
+
+
+        }
+
+        .txtimg {
+            display: flex;
+        }
+
+        .logo {
+            padding-left: 20px;
+            padding-top: 20px;
+            width: 50px;
+            height: 50px;
+            /* border-radius: 2px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .text1 {
+            color: white;
+            padding-top: 20px;
+            padding-left: 7px;
+            font-family: arial;
+            font-size: 15px;
+        }
+
+        .text2 {
+            color: grey;
+            padding-left: 7px;
+            padding-top: 3px;
+            font-family: arial;
+            font-size: 12px;
+        }
+
+        .text3 {
+            color: rgb(224, 222, 222);
+            padding-top: 15px;
+            padding-left: 17px;
+            font-family: arial;
+            font-size: 14px;
+
+        }
+
+        .text4 {
+            color: rgb(224, 222, 222);
+            padding-top: 2px;
+            padding-left: 17px;
+            font-family: arial;
+            font-size: 14px;
+
+        }
+
+        .trailer {
+            background-color: rgba(113, 108, 108, 0.596);
+            color: white;
+            margin-top: 40px;
+            margin-left: 17px;
+            padding: 7px 20px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .section-2 {
+            width: 90%;
+            margin: 10px auto;
+
+        }
+
+        .section-2a {
+            position: relative;
+            bottom: 200px;
+            /* left: 10px; */
+            background: linear-gradient(to bottom, transparent, #000000, #000000, #000000);
+        }
+
+        .section-2-1 {
+            width: 40%;
+            /* background-color: red; */
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* position: relative;
+            bottom: 330px;
+            left: 8px; */
+        }
+
+
+        .movie {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            opacity: 0.6;
+        }
+
+        .title {
+            width: 100%;
+        }
+
+        .line1 {
+            display: flex;
+            gap: 10px;
+        }
+
+        .content1 {
+            color: white;
+            font-weight: 100px;
+
+        }
+
+        .dot {
+            color: white;
+        }
+
+        .ua {
+            color: white;
+            background-color: rgb(175, 169, 169);
+            border: none;
+            outline: none;
+            padding: 3px 7px;
+            border-radius: 4px;
+
+        }
+
+        .content2 {
+            color: rgb(222, 218, 218);
+            padding-top: 20px;
+            font-size: 15px;
+        }
+
+        .content3 {
+            color: white;
+            padding-top: 20px;
+            font-weight: 100px;
+
+        }
+
+        .content4 {
+            display: flex;
+            padding-top: 20px;
+            gap: 30px;
+        }
+
+        .telugu {
+            color: white;
+            background-color: rgb(175, 169, 169);
+            padding: 0 7px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+
+        }
+
+        .buttonsss {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 20px;
+
+        }
+
+        .watch {
+            margin-top: 10px;
+            width: 350px;
+            height: 100px;
+            height: auto;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            color: white;
+            border: none;
+            /* outline: none; */
+            border-radius: 6px;
+            background: #009FFF;
+            background: -webkit-linear-gradient(to left, rgb(224, 6, 42), #009FFF);
+            background: linear-gradient(to left, rgb(224, 6, 42), #009FFF);
+        }
+
+        .watch:hover {
+            cursor: pointer;
+            scale: 1.1;
+            transition: 0.3s all ease;
+        }
+
+        .plus {
+            background-color: rgb(173, 168, 168);
+            margin-top: 20px;
+            padding: 20px;
+            border: none;
+            outline: none;
+            border-radius: 7px;
+        }
+
+        .plus i {
+            color: white;
+            font-size: 17px;
+        }
+
+        .section-2-2 {
+            /* width: 100%; */
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            overflow: scroll;
+            scrollbar-width: none;
+            margin-top: -5px;
+        }
+
+        .white2 {
+            bottom: 20px;
+        }
+
+        .box {
+            /* padding: 20px; */
+            margin: 10px 10px;
+            position: relative;
+        }
+
+        .box img {
+            width: 120px;
+            height: 380px;
+            background-image: cover;
+            border-radius: 7px;
+        }
+
+        .box:hover {
+            cursor: pointer;
+            scale: 1.2;
+            transition: 0.4 all ease;
+            padding: 5px;
+
+        }
+
+        .box1::after {
+            content: '1';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -30px;
+            bottom: 1px;
+            z-index: 20;
+
+
+        }
+
+        .box2::after {
+            content: '2';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -30px;
+            bottom: 1px;
+            z-index: 20;
+
+        }
+
+        .box3::after {
+            content: '3';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -30px;
+            bottom: 1px;
+            z-index: 20;
+
+        }
+
+        .box4::after {
+            content: '4';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -30px;
+            bottom: 1px;
+            z-index: 20;
+
+
+        }
+
+        .box5::after {
+            content: '5';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -30px;
+            bottom: 1px;
+            z-index: 20;
+
+
+        }
+
+        .box6::after {
+            content: '6';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -30px;
+            bottom: 1px;
+            z-index: 20;
+
+        }
+
+        .box7::after {
+            content: '7';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -30px;
+            bottom: 1px;
+            z-index: 20;
+        }
+
+        .box8::after {
+            content: '8';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -30px;
+            bottom: 1px;
+            z-index: 20;
+
+
+        }
+
+        .box9::after {
+            content: '9';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -30px;
+            bottom: 1px;
+            z-index: 20;
+
+        }
+
+        .box10::after {
+            content: '10';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -30px;
+            bottom: 1px;
+            z-index: 20;
+        }
+
+        .section-2-3 {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            overflow: scroll;
+            scrollbar-width: none;
+            margin-top: -5px;
+        }
+
+        .pics {
+            padding: 2px;
+            margin: 10px 10px;
+            position: relative;
+        }
+
+        .pics img {
+            width: 250px;
+            /* height: 100%; */
+            background-image: cover;
+            border-radius: 7px;
+        }
+
+        .pics:hover {
+            cursor: pointer;
+            scale: 1.2;
+            transition: 0.4 all ease;
+            padding: 5px;
+
+        }
+
+        .section-2-4 {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            overflow: scroll;
+            scrollbar-width: none;
+        }
+
+        .st {
+
+            /* height: 300px; */
+            padding: 2px;
+            margin: 20px 20px;
+            position: relative;
+        }
+
+        .st img {
+            width: 200px;
+            /* height: 100%; */
+            background-image: cover;
+            border-radius: 7px;
+        }
+
+        .st:hover {
+            cursor: pointer;
+            scale: 1.2;
+            transition: 0.4 all ease;
+            padding: 5px;
+        }
+
+        .section-2-5 {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            overflow: scroll;
+            scrollbar-width: none;
+        }
+
+        .lang {
+
+            /* height: 300px; */
+            padding: 2px;
+            margin: 20px 20px;
+            position: relative;
+        }
+
+        .lang img {
+            width: 200px;
+            /* height: 100%; */
+            background-image: cover;
+            border-radius: 7px;
+        }
+
+        .lang:hover {
+            cursor: pointer;
+            scale: 1.2;
+            transition: 0.4 all ease;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+        <nav class="nav-right">
+            <img src="nav1.png" alt="" class="nav1">
+            <div class="navicons">
+                <div class="i1"><i class="fa-solid fa-house"></i></div>
+                <div class="i2"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="i3"><i class="fa-solid fa-tv"></i></div>
+                <div class="i4"><i class="ic fa-regular fa-chess-queen"></i></div>
+                <div class="i5"><i class="fa-solid fa-person-running"></i></div>
+                <div class="i6"><i class="fa-solid fa-video"></i></div>
+            </div>
+
+        </nav>
+        <div class="main-section">
+            <!-- section 1 -->
+            <div class="section-1">
+                <div class="sub1">
+
+                </div>
+                <div class="sub2">
+                    <div class="txtimg">
+                        <img src="logo.png" class="logo" alt="logo">
+                        <div class="content">
+                            <p class="text1">Daredevil</p>
+                            <p class="text2">Streaming from March 5</p>
+                        </div>
+                    </div>
+                    <p class="text3">Devil's secret life is on the line in this gripping</p>
+                    <p class="text4">super hero drama!</p>
+                    <button class="trailer">
+                        <h4>Trailer</h4>
+                    </button>
+                </div>
+
+
+            </div>
+            <!-- section 2 -->
+            <div class="section-2">
+                <img src="bgmovie.avif" class="movie" alt="">
+                <div class="section-2a">
+                    <div class="section-2-1">
+                        <img src="title.png" class="title" alt="">
+                        <div class="line1">
+                            <p class="content1" class="content1">2024</p>
+                            <p class="dot"> . </p>
+                            <button class="ua">U/A 16+</button>
+                            <p class="dot"> . </p>
+                            <p class="content1">2h 20m</p>
+                            <p class="dot"> . </p>
+                            <p class="content1">5 Languages</p>
+                        </div>
+                        <div class="content2">
+                            <p>Manuel's return to the neighbourhood prompts a homemaker</p>
+                            <p>Priyadarshini to be cautious. Eventually, she realises that</p>
+                            <p>there's far more to him than meets the eye.</p>
+                        </div>
+                        <div class="content3">
+                            <p>Thriller | Drama | Suspense | Curious</p>
+                        </div>
+                        <div class="content4">
+                            <button class="telugu">Telugu</button>
+                            <p class="content3">Hindi</p>
+                            <p class="content3">Tamil</p>
+                            <p class="content3">Malayalam</p>
+                            <p class="content3">Kannada</p>
+                        </div>
+                        <div class="buttonsss">
+                            <button class="watch">
+                                <i class="fa-solid fa-play"></i>
+                                <h6>Watch Now</h6>
+                            </button>
+                            <button class="plus">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="Series">
+                        <h2 class="white1">Latest Releases</h2>
+                        <div class="section-2-2">
+                            <div class="box box1">
+                                <img src="1.avif" alt="" style="width:200px; height:180px;">
+                            </div>
+                            <div class="box box2">
+                                <img src="2.avif" alt="" style="width:200px; height:180px;">
+                            </div>
+                            <div class="box box3">
+                                <img src="3.avif" alt="" style="width:200px; height:180px;">
+                            </div>
+                            <div class="box box4">
+                                <img src="4.avif" alt="" style="width:200px; height:180px;">
+                            </div>
+                            <div class="box box5">
+                                <img src="5.avif" alt="" style="width:200px; height:180px;">
+                            </div>
+                            <div class="box box6">
+                                <img src="6.avif" alt="" style="width:200px; height:180px;">
+                            </div>
+                            <div class="box box7">
+                                <img src="7.avif" alt="" style="width:200px; height:180px;">
+                            </div>
+                            <di2 class="box box8">
+                                <img src="8.avif" alt="" style="width:200px; height:180px;">
+                            </di2>
+                            <div class="box box9">
+                                <img src="9.avif" alt="" style="width:200px; height:180px;">
+                            </div>
+                            <div class="box box10">
+                                <img src="10.avif" alt="" style="width:200px; height:180px;">
+                            </div>
+
+                        </div>
+                        <h2 class="white2 mx-30">Non-Stop Sports </h2>
+                        <div class="section-2-3">
+
+                            <div class="pics pics1">
+                                <img src="l1.avif" alt="">
+                            </div>
+                            <div class="pics pics2">
+                                <img src="l2.avif" alt="">
+                            </div>
+                            <div class="pics pics3">
+                                <img src="l3.avif" alt="">
+                            </div>
+                            <div class="pics pics4">
+                                <img src="l4.avif" alt="">
+                            </div>
+                            <div class="pics pics5">
+                                <img src="l5.avif" alt="">
+                            </div>
+                            <div class="pics pics6">
+                                <img src="l6.avif" alt="">
+                            </div>
+                            <div class="pics pics6">
+                                <img src="l7.avif" alt="">
+                            </div>
+                            <div class="pics pics6">
+                                <img src="l8.avif" alt="">
+                            </div>
+
+                        </div>
+                        <h2 class="white2 mx-30">Studios</h2>
+                        <div class="section-2-4">
+
+                            <div class="st">
+                                <img src="p1.avif" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="p2.webp" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="p3.avif" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="p4.avif" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="p5.avif" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="p6.webp" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="p7.webp" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="p8.webp" alt="">
+                            </div>
+
+                        </div>
+                        <h2 class="white2 mx-30">Popular Languages</h2>
+                        <div class="section-2-5">
+
+                            <div class="lang">
+                                <img src="h1.webp" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="h2.webp" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="h3.webp" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="h4.webp" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="h5.webp" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="h6.webp" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="h7.webp" alt="">
+                            </div>
+                            <div class="st">
+                                <img src="h8.webp" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+</body>
+
+</html>
